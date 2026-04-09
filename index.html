@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highway Patrol</title>
+
+<link rel="icon" type="image/png" href="aae.png">
+
+<style>
+body {
+  margin:0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:linear-gradient(180deg,#0a0f1c,#05070d);
+  color:#e6f0ff;
+  overflow-x:hidden;
+}
+
+/* INTRO */
+#intro {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  cursor:pointer;
+  transition:opacity 1s ease;
+}
+
+#intro h1 {
+  font-size:28px;
+  color:#7fb3ff;
+  letter-spacing:3px;
+  padding:20px 40px;
+  border-radius:12px;
+  background:rgba(15,26,51,0.6);
+}
+
+/* MAIN */
+#main-content {
+  opacity:0;
+  transform:scale(1.05);
+  transition:all 1s ease;
+}
+
+.show {
+  opacity:1 !important;
+  transform:scale(1) !important;
+}
+
+/* HEADER */
+header {
+  padding:40px 20px;
+  text-align:center;
+  background:radial-gradient(circle,#0f1a33,#05070d);
+  border-bottom:1px solid #1a2a4d;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+}
+
+header h1 {
+  margin:0;
+  font-size:42px;
+  letter-spacing:3px;
+  color:#7fb3ff;
+}
+
+/* HERO */
+.hero { padding:80px 20px; text-align:center; max-width:900px; margin:auto; }
+
+/* BUTTON */
+.discord-btn {
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 35px;
+  border-radius:30px;
+  background:linear-gradient(45deg,#5865F2,#7289DA);
+  color:white;
+  text-decoration:none;
+}
+
+/* SHOWCASE */
+.showcase-top {
+  display:flex;
+  gap:40px;
+  align-items:center;
+  justify-content:center;
+  max-width:1100px;
+  margin:60px auto;
+  padding:20px;
+  flex-wrap:wrap;
+}
+
+.main-image {
+  width:500px;
+  max-width:100%;
+  border-radius:12px;
+}
+
+.showcase-text {
+  max-width:500px;
+}
+
+.showcase-text h2 {
+  margin-bottom:15px;
+  font-size:26px;
+}
+
+.showcase-text p {
+  color:#c7d9ff;
+}
+
+/* GALLERY */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:20px;
+  padding:40px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.gallery img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.gallery img:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(0,102,255,0.7);
+}
+
+/* LIGHTBOX */
+#lightbox {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+#lightbox img {
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+}
+
+/* MUSIC */
+.music-panel {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#0f1a33;
+  border-radius:12px;
+  padding:10px;
+  width:180px;
+}
+
+.music-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+  margin-bottom:5px;
+}
+
+#music-name {
+  max-width:120px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.music-btn {
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:#2f6fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.slider { width:100%; }
+
+footer {
+  text-align:center;
+  padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+  <h1>CLICK TO ENTER</h1>
+</div>
+
+<audio id="bg-music" loop>
+  <source src="badboys.mp3" type="audio/mpeg">
+</audio>
+
+<div id="main-content">
+
+<header>
+  <img src="high.png" style="height:50px;">
+  <h1>San Andreas Highway Patrol</h1>
+</header>
+
+<section class="hero">
+  <h2>Highway Patrol</h2>
+  <p>Welcome to the San Andreas Collective. Enter a world of high-speed pursuits, tactical enforcement, and elite law enforcement roleplay. The streets are waiting.</p>
+  <a href="https://discord.gg/XVErJ5QpCf" target="_blank" class="discord-btn">
+  Join Now
+</a>
+</section>
+
+<section class="showcase-top">
+  <img src="imagegg.png" class="main-image">
+  <div class="showcase-text">
+    <h2>Welcome to SACRP Highway Patrol</h2>
+    <p>
+    Join a community-driven FiveM GTA RP server crafted for players who live for authentic law enforcement roleplay.    
+</p>
+    <p>
+      Patrol the streets, enforce the law, and uphold justice in a fully immersive, dynamic world. Every decision matters, every call is real, and every encounter shapes your story. 
+      Connect with a diverse team of officers and citizens, and experience the thrill of being on the front lines of San Andreas law enforcement.
+    </p>
+  </div>
+</section>
+
+
+<section class="gallery">
+  <img src="imageg.png" onclick="openImage(this.src)">
+  <img src="image42141523.png" onclick="openImage(this.src)">
+  <img src="imagen.png" onclick="openImage(this.src)">
+  <img src="image42141.png" onclick="openImage(this.src)">
+  <img src="image1331.png" onclick="openImage(this.src)">
+</section>
+
+
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img">
+</div>
+
+<!-- ✅ UPDATED MUSIC PANEL -->
+<div class="music-panel">
+
+  <div class="music-top">
+    <span id="music-name">Now Playing</span>
+    <div class="music-btn" onclick="toggleMusic()">🎵</div>
+  </div>
+
+  <input type="range" min="0" max="1" step="0.01" value="0.4" class="slider" id="volume-slider">
+
+</div>
+
+<footer>© 2026 San Andreas Collective</footer>
+
+</div>
+
+<script>
+const intro = document.getElementById('intro');
+const main = document.getElementById('main-content');
+const music = document.getElementById('bg-music');
+const slider = document.getElementById('volume-slider');
+const musicName = document.getElementById('music-name');
+
+intro.onclick = () => {
+  music.volume = 0.4;
+  music.play();
+  updateMusicName();
+  intro.style.display="none";
+  main.classList.add('show');
+};
+
+slider.oninput = () => music.volume = slider.value;
+
+function toggleMusic() {
+  music.paused ? music.play() : music.pause();
+}
+
+function updateMusicName() {
+  const src = music.querySelector('source').src;
+  const name = src.split('/').pop().replace('.mp3','');
+  musicName.textContent = "Now Playing: " + name;
+}
+
+function openImage(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById('lightbox').style.display = "none";
+}
+</script>
+
+</body>
+</html>
